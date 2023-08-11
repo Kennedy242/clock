@@ -17,6 +17,7 @@
   height: 100%;
   border: 10px solid var(--border);
   border-radius: 50%;
+  box-sizing: border-box;
 }
 
 .outer-clock-face {
