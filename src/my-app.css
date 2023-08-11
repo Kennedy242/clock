@@ -1,4 +1,13 @@
 .clock-container {
+  --secondHandColor: #ff5e5e;
+  --minuteHandColor: #61afff;
+  --hourHandColor: #61afff;
+  --faceColor: #fefefc;
+  --border: #545271;
+  /* TickMark for 12,3,6,9 */
+  --xyNumberTicks: #b8b8c5;
+  --numberTicks: #bdbdcb;
+  --originColor: #4d4b63;
   height: 90vw;
   width: 90vw;
 }
@@ -6,7 +15,7 @@
 .clock {
   width: 100%;
   height: 100%;
-  border: 10px solid #545271;
+  border: 10px solid var(--border);
   border-radius: 50%;
 }
 
@@ -15,7 +24,7 @@
   width: 100%;
   height: 100%;
   border-radius: 100%;
-  background: #fefefc;
+  background: var(--faceColor);
   overflow: hidden;
 }
 
@@ -32,13 +41,13 @@
   position: absolute;
   width: 6px;
   height: 100%;
-  background: #b8b8c5;
+  background: var(--xynumberTicks);
   z-index: 0;
   left: 49%;
 }
 
 .outer-clock-face .marking {
-  background: #bdbdcb;
+  background: var(--numberTicks);
   width: 3px;
 }
 
@@ -72,7 +81,7 @@
   left: 10%;
   width: 80%;
   height: 80%;
-  background: #fefefc;
+  background: var(--faceColor);
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   border-radius: 100%;
@@ -89,7 +98,7 @@
   border-radius: 18px;
   margin-left: -9px;
   margin-top: -6px;
-  background: #4d4b63;
+  background: var(--orginColor);
   z-index: 11;
 }
 
@@ -97,7 +106,6 @@
   width: 50%;
   right: 50%;
   height: 6px;
-  background: #61afff;
   position: absolute;
   top: 50%;
   border-radius: 6px;
@@ -107,17 +115,19 @@
 }
 
 .hand.hour-hand {
+  background: var(--hourHandColor);
   width: 20%;
   z-index: 3;
 }
 
 .hand.min-hand {
+  background: var(--minuteHandColor);
   height: 3px;
   z-index: 10;
   width: 35%;
 }
 
 .hand.second-hand {
-  background: #ff5e5e;
+  background: var(--secondHandColor);
   width: 40%;
 }
